@@ -1,0 +1,63 @@
+baseURL: https://mateusz-plociennik.github.io/
+locale: en-AU
+title: Mateusz Płóciennik
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+outputs:
+  home: [html, rss, json]
+
+pagination:
+  pagerSize: 10
+
+params:
+  env: production
+  title: Mateusz Płóciennik
+  description: Hobby projects and notes.
+  author: Mateusz Płóciennik
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: false
+  ShowRssButtonInSectionTermList: true
+  homeInfoParams:
+    # TODO(owner): personalise this intro.
+    Title: Hi, I'm Mateusz
+    Content: >-
+      I write here about hobby projects: what I'm building, how I research
+      it and what I learn along the way.
+  socialIcons:
+    - name: github
+      url: https://github.com/mateusz-plociennik
+    - name: rss
+      url: index.xml
+  fuseOpts:
+    keys: [title, permalink, summary, content]
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
